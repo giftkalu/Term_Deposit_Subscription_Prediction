@@ -1,36 +1,134 @@
-# Term Deposit Subscription
-Building a Decision Tree classifier to predict if the client will subscribe to a Term Deposit based on their demographic and behavioural data. This dataset has 11162 entries.
-#### Variables
-1. age: Age of the client
-2. job: Occupation of the client
-3. marital: Whether the client is married or not
-4. education: The highest level of Education attained(ordinal)
-5. default: If the customer has a previous loan default
-6. balance: Current balance in the account
-7. housing: If the customer had a housing loan
-8. loan: If they have obtained a previous loan
-9. contact: Mode of contact with customer
-10. day: The day of the month contacted
-11. month: The month contact was made
-12. duration: The duration of the most recent contact with the client in seconds.
-13. campaign:The number of contacts performed during the current marketing campaign.
-14. pdays:The number of days that passed since the client was last contacted, or -1 if not contacted previously.
-15. previous:The number of times the client was contacted before during previous campaigns.
-16. poutcome:The outcome of the previous marketing campaign with the client (e.g., success, failure).
-#### Target Variable
-17. deposit: subscribed to the deposit (yes or no)
-#### Model Used
-- Decision Trees
-#### Techniques Used
-- Exploratory Data Analysis
-- Diverse Data Visualisations
-- Handling Categorical columns using label encoders
-- Hyper Parameter Tuning using Grid Search
-- Tree pruning
-- Overview of Insights
-#### Evaluation Metrics
-- Accuracy
-- Cross Validation score
-- Precision
-- Recall
-- F-1 score
+
+# 📊 Term Deposit Subscription Prediction  
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-0.25-orange?logo=scikit-learn&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange?logo=jupyter&logoColor=white)
+![Accuracy](https://img.shields.io/badge/Accuracy-76.2%25-brightgreen)
+![Dataset Size](https://img.shields.io/badge/Dataset-11.1k%20records-blueviolet)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+A machine learning project that predicts **bank customers’ likelihood of subscribing to a term deposit** using a Decision Tree classifier.  
+This project not only builds a model but also provides **business insights** to optimize marketing campaigns, reduce costs, and improve conversion rates.  
+
+---
+
+## 🚀 Executive Summary  
+
+- ✅ **Model Accuracy**: 82.9% (Cross-Validation: 78.5%)  
+- 📌 **Top Success Factor**: Call duration (78.2% importance)  
+- 👔 **Target Market**: Management-level professionals with secondary education  
+- 📱 **Best Contact Strategy**: Cellular contact with longer, quality conversations  
+- 📅 **Best Campaign Timing**: June shows peak subscription rates  
+
+---
+
+## 📂 Dataset  
+
+- **Size**: 11,162 customer records  
+- **Features**: 16 (demographics, financial, and campaign details)  
+- **Target**: Subscription (`Yes` / `No`)  
+- **Class Balance**: 52.6% Non-subscribers | 47.4% Subscribers  
+
+---
+
+## 🔑 Key Insights  
+
+### 👔 Employment Patterns  
+- Management roles show the **highest subscription rates**  
+- Students show the lowest engagement  
+
+### 🎓 Education  
+- Secondary education clients subscribe the most  
+- Higher education also strong, but primary education shows low interest  
+
+### 💰 Financial Characteristics  
+- Moderate account balances (500–2000) → **best target segment**  
+- Customers **without housing loans** subscribe more  
+
+### 📞 Campaign Effectiveness  
+- Cellular > Telephone (for conversions)  
+- **Call duration is the single strongest predictor** of success  
+
+---
+
+## 📈 Model Performance  
+
+| Metric       | Score |
+|--------------|-------|
+| Accuracy     | 76.2% |
+| Precision    | 69.5% |
+| Recall       | 86.4% |
+| F1-Score     | 77.0% |
+
+**Decision Pathway Example:**  
+1. Was the call long enough? (Duration)  
+2. Was the contact cellular?  
+3. Did the customer show interest in past campaigns?  
+
+---
+
+## 🧭 Strategic Recommendations  
+
+- 🎯 **Target Segments**:  
+  - Management professionals (35–55 yrs)  
+  - Married, secondary-educated clients  
+  - Non-defaulters with moderate balances  
+
+- 📞 **Contact Strategy**:  
+  - Prioritize cellular calls  
+  - Focus on **quality, longer conversations**  
+  - Implement call scripts to boost engagement  
+
+- 📅 **Campaign Planning**:  
+  - Allocate ~60% of budget to high-probability prospects  
+  - Run peak campaigns in **June**  
+
+---
+
+## 🛠️ Tech Stack  
+
+- **Language**: Python   
+- **Libraries**: Pandas, Scikit-Learn, Matplotlib, Seaborn  
+- **Model**: Decision Tree Classifier 🌳  
+- **Tools**: Jupyter Notebook, GitHub  
+
+---
+
+## 📌 Project Structure  
+
+```bash
+├── bank.csv                              # Dataset files
+├── DECISION TREE PROJECT.ipynb           # Jupyter notebooks (EDA, Modeling)
+├── models/                               # Saved ML models
+├── visuals/                              # Charts and plots
+└── README.md                             # Project documentation
+````
+
+---
+
+## 📌 Visual Preview
+
+### 🔥 Feature Importance
+
+![Feature Importance](visuals/feature_importance.png)
+
+### 📊 Confusion Matrix
+
+![Confusion Matrix](visuals/confusion_matrix.png)
+
+---
+
+## 🤝 Contributing
+
+1. Open a Pull Request 🚀
+
+---
+
+## 👤 Author
+
+**Gift Kalu**
+Your Creative Data Scientist ✨
+[LinkedIn](https://www.linkedin.com/in/gift-kalu)
+
+---
