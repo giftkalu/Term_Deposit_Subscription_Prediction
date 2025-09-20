@@ -100,8 +100,13 @@ This project not only builds a model but also provides **business insights** to 
 ```bash
 ├── bank.csv                              # Dataset files
 ├── DECISION TREE PROJECT.ipynb           # Jupyter notebooks (EDA, Modeling)
-├── models/                               # Saved ML models
+├── app.py                                # App for deploment
+├──requirements.txt                       # System requirements for reproducable results
+├── decision_tree_model.pkl               # Saved ML model
+├── label_encoders.pkl                    # Saved Label encoder
 ├── visuals/                              # Charts and plots
+        └── td1.png                       # Feature importance diagram
+        └── td3.png                       # Decision Tree Classifier
 └── README.md                             # Project documentation
 ````
 
@@ -111,11 +116,11 @@ This project not only builds a model but also provides **business insights** to 
 
 ### 🔥 Feature Importance
 
-![Feature Importance](visuals/feature_importance.png)
+![Feature Importance](visuals/td1.png)
 
-### 📊 Confusion Matrix
+### 📊 Decision Tree
 
-![Confusion Matrix](visuals/confusion_matrix.png)
+![Confusion Matrix](visuals/td3.png)
 
 ---
 
