@@ -146,7 +146,7 @@ with col2:
 st.subheader("📊 Model Performance")
 col1, col2, col3, col4 = st.columns(4)
 with col1:
-    st.metric("Accuracy", "82.9%", "4.4%")
+    st.metric("Accuracy", "76.2%", "4.4%")
 with col2:
     st.metric("Precision", "69.5%", "2.1%")
 with col3:
@@ -164,14 +164,7 @@ fi = pd.DataFrame({
     "Importance": importance
 }).sort_values(by="Importance", ascending=True)
 
-fig = px.barh(fi.tail(5), x="Importance", y="Features",
+fig = px.bar(fi.tail(5), x="Importance", y="Features", orientation='h',
              title="Top 5 Most Important Features")
+fig.update_layout(xaxis_title="Importance Score", yaxis_title="Features")
 st.plotly_chart(fig, use_container_width=True)
-
-# Sidebar instructions
-st.sidebar.markdown("---")
-st.sidebar.info("""
-**Using your trained model**
-- Ensure `decision_tree_model.pkl` and `label_encoders.pkl` are in the app directory.
-- Model must be trained and saved with `pickle`.
-""")
