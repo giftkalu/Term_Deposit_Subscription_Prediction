@@ -84,8 +84,9 @@ with col1:
 
         # Encode categorical features
         processed_input = input_data.copy()
-        for col in label_encoders:
-            processed_input[col] = label_encoders[col].transform(processed_input[col])
+        for col in input_data.columns:
+            if col in label_encoders and col != 'deposit':
+                processed_input[col] = label_encoders[col].transform(processed_input[col])
 
         # Make prediction
         prediction = model.predict(processed_input)[0]
