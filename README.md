@@ -31,6 +31,27 @@ This project not only builds a model but also provides **business insights** to 
 - **Class Balance**: 52.6% Non-subscribers | 47.4% Subscribers  
 
 ---
+### 📋 Feature Description
+
+| Feature | Description |
+|---------|-------------|
+| **age** | Age of the client |
+| **job** | Occupation of the client |
+| **marital** | Marital status (married, single, divorced) |
+| **education** | Highest education level (primary, secondary, tertiary, unknown) |
+| **default** | Has credit in default (yes/no) |
+| **balance** | Average yearly balance in euros |
+| **housing** | Has housing loan (yes/no) |
+| **loan** | Has personal loan (yes/no) |
+| **contact** | Contact communication type (cellular, telephone, unknown) |
+| **day** | Last contact day of the month |
+| **month** | Last contact month of year |
+| **duration** | Last contact duration in seconds |
+| **campaign** | Number of contacts performed during this campaign |
+| **pdays** | Number of days since client was last contacted (-1 if never contacted) |
+| **previous** | Number of contacts performed before this campaign |
+| **poutcome** | Outcome of previous marketing campaign |
+
 
 ## 🔑 Key Insights  
 
